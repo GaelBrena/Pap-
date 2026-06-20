@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Día del Papá</title>
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#1d4ed8;
+      --card:rgba(255,255,255,.08);
+      --text:#e5e7eb;
+      --accent:#22c55e;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1000px 500px at 20% 10%, rgba(34,197,94,.35), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(29,78,216,.55), transparent 55%),
+                  linear-gradient(135deg, var(--bg1), #030712 70%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{
+      width:min(900px, 100%);
+      text-align:center;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing:.5px;
+    }
+    .sub{
+      margin:0 auto 22px;
+      max-width: 60ch;
+      opacity:.92;
+      font-size:1.05rem;
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .photo{
+      width:100%;
+      aspect-ratio: 16/9;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .placeholder{
+      padding:18px 22px;
+      line-height:1.35;
+      max-width: 60ch;
+      color:rgba(255,255,255,.85);
+    }
+
+    .footer-note{
+      margin-top:14px;
+      font-size:.95rem;
+      opacity:.9;
+    }
+
+    .btn{
+      margin-top:14px;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+
+    @media (prefers-reduced-motion: reduce){
+      *{transition:none !important}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Feliz Día Papá</h1>
+    <p class="sub">Feliz dia papá, que este dia sea especial para ti, gracias por todo lo que has hecho por nosotros por mi hermanito por mi maá, por mi, gracis por demostrar esa valentia, esa fuerza que hay, quisiera sser como tu que a pesar de que estas enfermo, herido, cansado, sigues adelante y en pie, eres el mejor papá del mundo y que este dia sea especial, Te quieri mucho💖</p>
+
+    <section class="card" aria-label="Tarjeta del Día del Papá">
+      <div class="photo" role="img" aria-label="Foto del papá">
+        <!--
+          Recomendación:
+          - Coloca una imagen en: dia_del_papa/foto-papa.jpg
+          - Asegúrate de que el nombre coincida con el src de abajo.
+        -->
+        <img src="foto-papa.jpg" alt="Mi papá" onerror="this.style.display='none'; document.getElementById('ph').style.display='block';" />
+        <div class="placeholder" id="ph" style="display:block;">
+          <div style="font-size:1.1rem; font-weight:700; margin-bottom:8px; color:rgba(34,197,94,.95)"></div>
+          
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span style="color:rgba(34,197,94,.95); font-weight:700;">Gracias</span> Por enseñarnos a que nunca debemos rendirnos y seguir adelante a pesar de la situacion.
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
+
